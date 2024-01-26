@@ -27,3 +27,18 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+// Дадаємо елемнти в список
+
+const galleryUl = document.querySelector("ul.gallery");
+
+function renderImages(images) {
+  images.forEach(img => {
+    galleryUl.insertAdjacentHTML("beforeend",
+      `<li><img class="images" src="${img.url}" alt="${img.alt}"></li>`
+    );
+  });
+}
+
+
+renderImages(images);
